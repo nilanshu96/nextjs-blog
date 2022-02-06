@@ -37,10 +37,10 @@ jobs:
       - name: Build and export a static site
         run: npm run build && npm run export
 
-      # Deploys a static export to gh-pages
-      - name: Deploy with gh-pages
-        run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          npx gh-pages -d out -u "github-actions-bot <support+actions@github.com>"
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Deploy the build folder to gh-pages
+      - name: Deploy build to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          enable_jekyll: false

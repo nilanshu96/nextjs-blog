@@ -24,6 +24,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      #Uses node 12
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          
+      # npm ci is a faster way to install modules on automated environments
+      - name: install modules
+        run: npm ci
       
       # Build and export static
       - name: Build and export a static site

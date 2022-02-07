@@ -13,7 +13,7 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" type="image/x-icon" href={basePath != null? basePath + "/favicon.ico": "/favicon.ico"} />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <meta
           name="description"
           content="A personal blog site built using Next.js"

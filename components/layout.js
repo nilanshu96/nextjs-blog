@@ -9,7 +9,8 @@ export const siteTitle = 'Nilanshu\'s blog site'
 
 export default function Layout({ children, home }) {
   const basePath = process.env.BASE_PATH;
-  const faviconPath = basePath != null ? basePath + "/favicon.ico" : "/favicon.ico";
+  const hostUrl = process.env.HOST_URL;
+  const faviconPath = basePath != null ? hostUrl + basePath + "/favicon.ico" : "/favicon.ico";
   return (
     <div className={styles.container}>
       <Head>

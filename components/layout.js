@@ -5,16 +5,18 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
 const name = 'Nilanshu V Rajmane'
-export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'Nilanshu\'s blog site'
 
 export default function Layout({ children, home }) {
+  const basePath = process.env.BASE_PATH
+
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={basePath != null? basePath + "/favicon.ico": "/favicon.ico"} />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="A personal blog site built using Next.js"
         />
         <meta
           property="og:image"

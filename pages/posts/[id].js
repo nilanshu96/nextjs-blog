@@ -9,6 +9,7 @@ export default function Post({ postData }) {
   return (
     <Layout>
       <Head>
+        <link rel="icon" href="../favicon.ico" />
         <title>{postData.title}</title>
       </Head>
       <article>

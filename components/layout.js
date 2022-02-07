@@ -8,13 +8,9 @@ const name = 'Nilanshu V Rajmane'
 export const siteTitle = 'Nilanshu\'s blog site'
 
 export default function Layout({ children, home }) {
-  const basePath = process.env.BASE_PATH;
-  const hostUrl = process.env.HOST_URL;
-  const faviconPath = basePath != null ? hostUrl + basePath + "/favicon.ico" : "/favicon.ico";
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href={faviconPath} />
         <meta
           name="description"
           content="A personal blog site built using Next.js"

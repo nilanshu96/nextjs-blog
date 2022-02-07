@@ -8,8 +8,6 @@ const name = 'Nilanshu V Rajmane'
 export const siteTitle = 'Nilanshu\'s blog site'
 
 export default function Layout({ children, home }) {
-  const basePath = process.env.BASE_PATH
-
   return (
     <div className={styles.container}>
       <Head>

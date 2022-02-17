@@ -17,7 +17,7 @@ I'm assuming that you have a static website ready waiting to be deployed but if 
 - Click on **set up a workflow yourself**
 - Paste the following
 
-```yml
+```yaml
 # This is a basic workflow to help you get started with Actions
 
 name: CI

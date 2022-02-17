@@ -6,10 +6,12 @@ import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 
 export default function Post({ postData }) {
+
   return (
     <Layout>
       <Head>
         <link rel="icon" href="../favicon.ico" />
+        <link rel="stylesheet" href="../styles/prism.css" />
         <title>{postData.title}</title>
       </Head>
       <article>

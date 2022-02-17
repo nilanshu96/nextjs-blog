@@ -3,11 +3,11 @@ title: 'Deploying a static Next Js website to Github Pages'
 date: '2022-02-15'
 ---
 
-Before proceeding to explain the steps on deployment let's make a few things clear about **Github Pages**
+Before proceeding let's make a few things clear about **Github Pages**
 
-- Github Pages is meant for hosting of static websites. Which means hosting plain old websites comprised of html, css and javascript.
-- Github processes your static website using Jekyll before hosting. This can be easily disabled by adding a **.nojekyll** file to the root directory of your website. This is required for two reasons
-	- Jekyll can bring in unwanted changes or behaviors on a website that has already been created using NextJs
+- Github Pages is meant for hosting static websites, that is hosting plain old websites comprised of html, css and javascript.
+- Github processes your static website using Jekyll before hosting. This can easily be disabled by adding a **.nojekyll** file to the root directory of your website. This is required for two reasons
+	- Jekyll can bring in unwanted changes or behaviors to a website that has already been created using NextJs
 	- Jekyll ignores directories starting with an underscore while NextJs creates an _next directory after exporting a static website
 
 I'm assuming that you have a static website ready waiting to be deployed but if not and you're new to NextJs then you can follow this simple yet awesome tutorial provided in the NextJs website [here](https://nextjs.org/learn/basics/create-nextjs-app?utm_source=next-site&utm_medium=homepage-cta&utm_campaign=next-website)
@@ -65,7 +65,7 @@ jobs:
 
 ```
 - Click **Start Commit** and after writing a commit message click **Commit new file**
-- The above procedure should be enough to deploy your website. If your website isn't being hosted from your root url (example: xyz.github.io) but instead is being hosted on a branch url (example: xyz.github.io/blog) then there would be errors while fetching static files. Also if you're using the **next/image** tag of NextJs then there will also be errors while exporting your project as the default image loader won't work.
+- The above action should be enough to deploy your website. If your website isn't being hosted from your root url (example: xyz.github.io) but instead is being hosted on a branch url (example: xyz.github.io/blog) then there would be errors while fetching static files. Also if you're using the **next/image** tag of NextJs then there will also be errors while exporting your project as the default image loader won't work.
 - To fix these add a file named **.env.production** to the root directory of your NextJs project and paste something like the following
 
 ```

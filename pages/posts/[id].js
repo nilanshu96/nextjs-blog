@@ -11,7 +11,7 @@ export default function Post({ postData }) {
     <Layout>
       <Head>
         <link rel="icon" href="../favicon.ico" />
-        <link rel="stylesheet" href="../styles/prism.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>{postData.title}</title>
       </Head>
       <article>
